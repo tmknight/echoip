@@ -1,8 +1,8 @@
 module github.com/mpolden/echoip
 
-go 1.13
+go 1.21.5
 
 require (
-	github.com/oschwald/geoip2-golang v1.5.0
-	golang.org/x/sys v0.0.0-20210223212115-eede4237b368 // indirect
+	github.com/oschwald/geoip2-golang v1.9.0
+	golang.org/x/sys v0.15.0 // indirect
 )
