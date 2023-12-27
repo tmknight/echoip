@@ -3,6 +3,12 @@ name: ci
 on:
   workflow_dispatch:
   push:
+    paths-ignore:
+      - '.github/**'
+      - '*.md'
+      - '.*'
+      - '.LICENSE'
+      - 'examples'
     branches: [master]
   pull_request:
     branches: [master]
