@@ -24,14 +24,15 @@ jobs:
       - name: install go
         uses: actions/setup-go@v5
         with:
-          go-version: 1.20
+          go-version: '1.20'
       - name: build and test
         run: make
-      - name: enable experimental docker features
-        if: ${{ github.ref == 'refs/heads/master' }}
-        run: |
-          echo '{"experimental":true}' | sudo tee /etc/docker/daemon.json
-          sudo service docker restart
-      - name: publish multi-arch docker image
-        if: ${{ github.ref == 'refs/heads/master' }}
-        run: make docker-pushx
+
+      # - name: enable experimental docker features
+      #   if: ${{ github.ref == 'refs/heads/master' }}
+      #   run: |
+      #     echo '{"experimental":true}' | sudo tee /etc/docker/daemon.json
+      #     sudo service docker restart
+      # - name: publish multi-arch docker image
+      #   if: ${{ github.ref == 'refs/heads/master' }}
+      #   run: make docker-pushx
