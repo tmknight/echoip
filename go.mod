@@ -1,6 +1,6 @@
 module github.com/tmknight/echoip
 
-go 1.20
+go 1.22
 
 require github.com/oschwald/geoip2-golang v1.9.0
 
